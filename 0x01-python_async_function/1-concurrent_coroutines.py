@@ -13,5 +13,5 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     """Executes wait_random n times"""
 
     wait_time = await asyncio.gather(*tuple(map(lambda_: wait_random(
-                max_radom(max_delay), rnage(n))))
-    return sorted(waite_times)
+                max_radom(max_delay), range(n))))
+    return sorted(wait_times)
